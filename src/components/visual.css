@@ -1,0 +1,175 @@
+.app-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .top-section,
+  .bottom-section {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .altitude-column,
+  .compass-column,
+  .horizon-column,
+  .bottom-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  
+  
+  .altitude-value {
+    margin-bottom: 10px;
+  }
+  
+  .circle {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .compass-circle {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .horizon-circle {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .bottom-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .compass-labels {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .compass-label {
+    position: absolute;
+    font-size: 14px; /* Adjust font size as needed */
+  }
+  
+  .compass-label.top {
+    top: -100px; /* Move above the circle */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .compass-label.right {
+    right: -100px; /* Move to the right of the circle */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .compass-label.bottom {
+    bottom: -100px; /* Move below the circle */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .compass-label.left {
+    left: -100px; /* Move to the left of the circle */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .compass-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 2px;
+    background-color: orange;
+    transform-origin: left;
+  }
+  
+  .compass-center-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px; /* Thickness of the line */
+    height: 75px; /* Length of the line */
+    background-color: black; /* Set the color to black */
+    transform: translate(-50%, -100%); /* Center the line and make it point up */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    margin: 0 10px;
+    padding: 10px 20px;
+  }
+  
+  .bottom-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .text-section {
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .text-details p {
+    margin: 5px 0;
+  }
+  
+  .add-component {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .altitude-line {
+    position: absolute;
+    width: 100px; /* Set the width to 50px */
+    height: 4px; /* Keep the height as 2px or adjust as needed */
+    background-color: blue; /* Set the color to blue */
+    left: 50%; /* Center the line horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+  }
+
+  .altitude-box {
+    position: relative; /* Make the altitude-box the positioning context */
+    height: 500px; /* Ensure the height matches the calculation in getAltitudePosition */
+    width: 100%; /* Adjust width as needed */
+    border: 1px solid black; /* Optional: Add a border for visibility */
+    overflow: hidden; /* Ensure the altitude line doesn't overflow */
+    background-color: transparent; /* Set the background color to transparent */
+  }
